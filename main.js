@@ -58,17 +58,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function addToCart() {
-// Товар 1
 var name1 = "Обосанный Диван";
 var description1 = "Сам Чупасусик обоссал этот диван во время долбёжки с неграми";
 var price1 = 100;
 var image1 = "divan.jpg";
 var quantity1 = 1;
 
-// Вызов функции addToCart() для товара 1
 addToCart(name1, description1, price1, image1, quantity1);
 
-// Товар 2
 var name2 = "Афродизиак с екстрактом 7KINa";
 var description2 = "Муж долбит меня по 48 часов в сутки
 После покупки этого средства
@@ -77,10 +74,8 @@ var price2 = 200;
 var image2 = "640px-Urinbecher.jpg";
 var quantity2 = 2;
 
-// Вызов функции addToCart() для товара 2
 addToCart(name2, description2, price2, image2, quantity2);
 
-// Функция добавления товара в корзину
 function addToCart(name, description, price, image, quantity) {
   var product = {
     name: name,
@@ -98,16 +93,13 @@ function addToCart(name, description, price, image, quantity) {
     cartItems = [];
   }
 
-  // Проверяем, есть ли уже такой товар в корзине
   var existingProductIndex = cartItems.findIndex(function(item) {
     return item.name === name;
   });
 
   if (existingProductIndex !== -1) {
-    // Обновляем количество товара
     cartItems[existingProductIndex].quantity += quantity;
   } else {
-    // Добавляем новый товар в корзину
     cartItems.push(product);
   }
 
