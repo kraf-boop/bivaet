@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мой интернет-магазин</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #6a2c70;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      margin: 20px;
+    }
+
+    .category {
+      background-color: #8f5fb5;
+      color: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: calc(33.33% - 20px);
+      float: left;
+      margin-right: 20px;
+    }
+
+    .button {
+      background-color: #6a2c70;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #6a2c70;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Мой интернет-магазин</h1>
+    <h1>По промокоду SemkinLapuh скидка 101%</h1>
+  </header>
+
+  <main>
+    <div class="product">
+      <a href="tovari/tovar1.html">
+        <img src="pictures/divan.jpg" alt="Обосанный Диван" width="200">
+        <h2 style="color: black;">Обосанный Диван</h2>
+        <p>Сам Чупасусик обоссал этот диван во время долбёжки с неграми</p>
+        <p class="price">Цена: $100.00</p>
+        <div class="button-container">
+          <button class="button" onclick="addToCart(this)">Добавить в корзину</button>
+          <button class="button">Купить</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="product">
+      <a href="tovari/tovar2.html">
+        <img src="pictures/640px-Urinbecher.jpg" alt="Афродизиак с екстрактом 7KINa" width="200">
+        <h2 style="color: black;">Афродизиак с екстрактом 7KINa</h2>
+        <p>Муж долбит меня по 48 часов в сутки</p>
+        <p>После покупки этого средства</p>
+        <p>Лишь одна капля и он дерёт меня до утра</p>
+        <p class="price">Цена: $25.00</p>
+        <div class="button-container">
+          <button class="button" onclick="addToCart(this)">Добавить в корзину</button>
+          <button class="button">Купить</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="product">
+      <a href="tovari/tovar3.html">
+        <img src="pictures/123123.jpg" alt="Famboy Milk" width="200">
+        <h2 style="color: black;">Famboy Milk</h2>
+        <p>Молоко было добыто особым способом дойки Dimas1215</p>
+        <p class="price">Цена: $15.00</p>
+        <div class="button-container">
+          <button class="button" onclick="addToCart(this)">Добавить в корзину</button>
+          <button class="button">Купить</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="product">
+      <a href="tovari/tovar4.html">
+        <img src="pictures/IMG_2552.gif" alt="Живой Огурец" width="200">
+        <h2 style="color: black;">Живой Огурец</h2>
+        <p>Самое лучшее средство лечения гемороя это живой огурец </p>
+        <p>Были украдены с огорода Lanek</p>
+        <p class="price">Цена: $5.00</p>
+        <div class="button-container">
+          <button class="button" onclick="addToCart(this)">Добавить в корзину</button>
+          <button class="button">Купить</button>
+        </div>
+      </a>
+    </div>
+    
+    <div class="product">
+      <a href="tovari/tovar5.html">
+        <img src="pictures/g.jpg" alt="Обосранные трусы хамстера" width="200">
+        <h2 style="color: black;">Обосранные трусы хамстера</h2>
+        <p>Самый хайповый аксессуар 2023 года</p>
+        <p class="price">Цена: $2.50</p>
+        <div class="button-container">
+          <button class="button" onclick="addToCart(this)">Добавить в корзину</button>
+          <button class="button">Купить</button>
+        </div>
+      </a>
+    </div>
+    
+    <div style="clear: both;"></div>
+    
+  </main>
+
+  <footer>
+    <p>© Семкин Лапух. Все права защищены.</p>
+    <a href="prikoli/karzina.html">Корзина</a> | <a href="страница_регистрации.html">Регистрация</a>
+  </footer>
+
+  <script>
+    function addToCart(button) {
+      console.log('Добавлено в корзину: ' + button.parentNode.parentNode.querySelector('h2').textContent);
+    }
+  </script>
+</body>
+</html>
